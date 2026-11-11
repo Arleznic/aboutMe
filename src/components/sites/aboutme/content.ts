@@ -1,3 +1,5 @@
+import { asset } from "@/lib/asset";
+
 // Page content, kept in one place so it is easy to edit.
 
 export const site = {
@@ -6,7 +8,7 @@ export const site = {
   intro:
     "I'm learning web development and enjoy building things for the internet. This page is where I share what I'm working on.",
   // GitHub avatar. Replace the file to use a different photo.
-  photo: { src: "/sites/aboutme/avatar.jpg", alt: "Nicolas Mogollon" },
+  photo: { src: asset("/sites/aboutme/avatar.jpg"), alt: "Nicolas Mogollon" },
   github: "https://github.com/Arleznic",
 };
 
@@ -25,6 +27,6 @@ export const projects: Project[] = [
     category: "Personal Website",
     description:
       "This website. Built with Next.js, TypeScript and Tailwind CSS.",
-    logo: "/sites/aboutme/project-aboutme.svg",
+    logo: asset("/sites/aboutme/project-aboutme.svg"),
   },
 ];

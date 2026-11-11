@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Karla } from "next/font/google";
+import { asset } from "@/lib/asset";
 import "./globals.css";
 
 const karla = Karla({
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   description: "Personal website of Nicolas Mogollon. See what I am working on.",
   icons: {
     icon: [
-      { url: "/sites/aboutme/favicon.svg", type: "image/svg+xml" },
+      { url: asset("/sites/aboutme/favicon.svg"), type: "image/svg+xml" },
     ],
   },
 };

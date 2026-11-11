@@ -26,3 +26,11 @@ Images live in `public/sites/aboutme/`.
 ```bash
 npm run check
 ```
+
+## Publishing
+
+Every push to `main` builds the site and publishes it to GitHub Pages:
+https://arleznic.github.io/aboutMe/
+
+The workflow is `.github/workflows/deploy-pages.yml`. It builds with `GITHUB_PAGES=true`, which
+exports a static site under the `/aboutMe` path (see `next.config.ts`).
