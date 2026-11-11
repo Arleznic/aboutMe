@@ -7,9 +7,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
-  --font-heading: var(--font-sans);
+  --font-sans: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
+  --font-heading: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -127,4 +127,53 @@
   html {
     @apply font-sans;
   }
+}
+/* Site styles (layout based on michaelmannucci.com) */
+@layer base {
+  body {
+    color: rgb(31 41 55);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* In the base layer so utilities such as text-sm can override them. */
+  .mm-site {
+    font-family: var(--font-karla), Arial, sans-serif;
+  }
+
+  .mm-site :is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--font-inter), Arial, sans-serif;
+    line-height: 1.25 !important;
+  }
+
+  .mm-site p {
+    line-height: 1.625;
+    color: rgb(107 114 128);
+  }
+}
+
+.mm-contain {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 56rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.mm-link {
+  color: rgb(31 41 55);
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 6px;
+  transition-duration: 0.3s;
+}
+
+.mm-link:hover {
+  text-decoration-color: #009dce;
+}
+
+.mm-card {
+  box-shadow:
+    0 0 0 1px rgba(3, 7, 18, 0.075),
+    0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
